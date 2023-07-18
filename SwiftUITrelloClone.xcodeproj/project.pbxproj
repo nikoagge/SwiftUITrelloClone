@@ -11,6 +11,9 @@
 		1769DB732A66D08B0005E7EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769DB722A66D08B0005E7EE /* ContentView.swift */; };
 		1769DB752A66D08C0005E7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1769DB742A66D08C0005E7EE /* Assets.xcassets */; };
 		1769DB782A66D08C0005E7EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1769DB772A66D08C0005E7EE /* Preview Assets.xcassets */; };
+		1769DB802A66D1660005E7EE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769DB7F2A66D1660005E7EE /* Card.swift */; };
+		1769DB822A66D2F80005E7EE /* BoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769DB812A66D2F80005E7EE /* BoardList.swift */; };
+		1769DB842A66D3FA0005E7EE /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769DB832A66D3FA0005E7EE /* Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		1769DB722A66D08B0005E7EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1769DB742A66D08C0005E7EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1769DB772A66D08C0005E7EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1769DB7F2A66D1660005E7EE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		1769DB812A66D2F80005E7EE /* BoardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardList.swift; sourceTree = "<group>"; };
+		1769DB832A66D3FA0005E7EE /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		1769DB6F2A66D08B0005E7EE /* SwiftUITrelloClone */ = {
 			isa = PBXGroup;
 			children = (
+				1769DB7E2A66D1570005E7EE /* Models */,
 				1769DB702A66D08B0005E7EE /* SwiftUITrelloCloneApp.swift */,
 				1769DB722A66D08B0005E7EE /* ContentView.swift */,
 				1769DB742A66D08C0005E7EE /* Assets.xcassets */,
@@ -65,6 +72,16 @@
 				1769DB772A66D08C0005E7EE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1769DB7E2A66D1570005E7EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1769DB832A66D3FA0005E7EE /* Board.swift */,
+				1769DB812A66D2F80005E7EE /* BoardList.swift */,
+				1769DB7F2A66D1660005E7EE /* Card.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1769DB732A66D08B0005E7EE /* ContentView.swift in Sources */,
+				1769DB802A66D1660005E7EE /* Card.swift in Sources */,
+				1769DB842A66D3FA0005E7EE /* Board.swift in Sources */,
+				1769DB822A66D2F80005E7EE /* BoardList.swift in Sources */,
 				1769DB712A66D08B0005E7EE /* SwiftUITrelloCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
