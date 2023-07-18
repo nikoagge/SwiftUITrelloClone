@@ -25,6 +25,7 @@
 		1769DB7F2A66D1660005E7EE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		1769DB812A66D2F80005E7EE /* BoardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardList.swift; sourceTree = "<group>"; };
 		1769DB832A66D3FA0005E7EE /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		1769DB852A66F4420005E7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		1769DB6F2A66D08B0005E7EE /* SwiftUITrelloClone */ = {
 			isa = PBXGroup;
 			children = (
+				1769DB852A66F4420005E7EE /* Info.plist */,
 				1769DB7E2A66D1570005E7EE /* Models */,
 				1769DB702A66D08B0005E7EE /* SwiftUITrelloCloneApp.swift */,
 				1769DB722A66D08B0005E7EE /* ContentView.swift */,
@@ -290,6 +292,7 @@
 				DEVELOPMENT_TEAM = 7X48R5E6LJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUITrelloClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +322,7 @@
 				DEVELOPMENT_TEAM = 7X48R5E6LJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUITrelloClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
