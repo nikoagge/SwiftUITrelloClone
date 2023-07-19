@@ -14,6 +14,7 @@
 		1769DB802A66D1660005E7EE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769DB7F2A66D1660005E7EE /* Card.swift */; };
 		1769DB822A66D2F80005E7EE /* BoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769DB812A66D2F80005E7EE /* BoardList.swift */; };
 		1769DB842A66D3FA0005E7EE /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769DB832A66D3FA0005E7EE /* Board.swift */; };
+		1769DB872A66F5E60005E7EE /* Board+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769DB862A66F5E60005E7EE /* Board+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		1769DB7F2A66D1660005E7EE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		1769DB812A66D2F80005E7EE /* BoardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardList.swift; sourceTree = "<group>"; };
 		1769DB832A66D3FA0005E7EE /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		1769DB852A66F4420005E7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1769DB852A66F4420005E7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1769DB862A66F5E60005E7EE /* Board+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Board+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +60,13 @@
 		1769DB6F2A66D08B0005E7EE /* SwiftUITrelloClone */ = {
 			isa = PBXGroup;
 			children = (
-				1769DB852A66F4420005E7EE /* Info.plist */,
+				1769DB882A66F5EB0005E7EE /* Extensions */,
 				1769DB7E2A66D1570005E7EE /* Models */,
 				1769DB702A66D08B0005E7EE /* SwiftUITrelloCloneApp.swift */,
 				1769DB722A66D08B0005E7EE /* ContentView.swift */,
 				1769DB742A66D08C0005E7EE /* Assets.xcassets */,
 				1769DB762A66D08C0005E7EE /* Preview Content */,
+				1769DB852A66F4420005E7EE /* Info.plist */,
 			);
 			path = SwiftUITrelloClone;
 			sourceTree = "<group>";
@@ -84,6 +87,14 @@
 				1769DB7F2A66D1660005E7EE /* Card.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1769DB882A66F5EB0005E7EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1769DB862A66F5E60005E7EE /* Board+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 				1769DB802A66D1660005E7EE /* Card.swift in Sources */,
 				1769DB842A66D3FA0005E7EE /* Board.swift in Sources */,
 				1769DB822A66D2F80005E7EE /* BoardList.swift in Sources */,
+				1769DB872A66F5E60005E7EE /* Board+Extension.swift in Sources */,
 				1769DB712A66D08B0005E7EE /* SwiftUITrelloCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

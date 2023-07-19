@@ -15,7 +15,7 @@ class BoardList: NSObject, ObservableObject, Identifiable, Codable {
     
     init(
         boardId: UUID,
-        cards: [Card],
+        cards: [Card] = [],
         name: String
     ) {
         self.boardId = boardId
