@@ -64,7 +64,10 @@ struct BoardListView: View {
     private var listView: some View {
         List {
             ForEach(boardList.cards) { card in
-                Text(card.content)
+                CardView(
+                    boardList: boardList,
+                    card: card
+                )
             }
             .listRowSeparator(.hidden)
             .listRowInsets(.init(

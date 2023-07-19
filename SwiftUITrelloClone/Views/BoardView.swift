@@ -24,7 +24,10 @@ struct BoardView: View {
                     spacing: 24
                 ) {
                     ForEach(board.boardLists) { boardList in
-                        Text(boardList.name)
+                        BoardListView(
+                            board: board,
+                            boardList: boardList
+                        )
                     }
                     
                     Button("+ Add list") {
