@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUITrelloCloneApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BoardView()
         }
     }
 }
