@@ -57,11 +57,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		17559E1E2A68469800498E30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1769DB642A66D08B0005E7EE = {
 			isa = PBXGroup;
 			children = (
 				1769DB6F2A66D08B0005E7EE /* SwiftUITrelloClone */,
 				1769DB6E2A66D08B0005E7EE /* Products */,
+				17559E1E2A68469800498E30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +138,8 @@
 			dependencies = (
 			);
 			name = SwiftUITrelloClone;
+			packageProductDependencies = (
+			);
 			productName = SwiftUITrelloClone;
 			productReference = 1769DB6D2A66D08B0005E7EE /* SwiftUITrelloClone.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +168,8 @@
 				Base,
 			);
 			mainGroup = 1769DB642A66D08B0005E7EE;
+			packageReferences = (
+			);
 			productRefGroup = 1769DB6E2A66D08B0005E7EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

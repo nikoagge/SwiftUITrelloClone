@@ -10,6 +10,7 @@ import SwiftUI
 struct BoardListView: View {
     @ObservedObject var board: Board
     @StateObject var boardList: BoardList
+    @State var listHeight: CGFloat = 0
     
     var body: some View {
         VStack(
@@ -20,6 +21,7 @@ struct BoardListView: View {
             
             listView
                 .listStyle(.plain)
+                .padding(.top, 16)
             
             Button("+ Add Card") {
                 
@@ -93,7 +95,7 @@ struct BoardListView_Previews: PreviewProvider {
         .previewLayout(.sizeThatFits)
         .frame(
             width: 310,
-            height: 530
+            height: 512
         )
     }
 }
