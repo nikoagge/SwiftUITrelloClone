@@ -28,6 +28,13 @@ struct BoardView: View {
                             board: board,
                             boardList: boardList
                         )
+                        .onDrop(
+                            of: [Card.typeIdentifier],
+                            delegate: BoardDropDelegate(
+                                board: board,
+                                boardList: boardList
+                            )
+                        )
                     }
                     
                     Button("+ Add list") {

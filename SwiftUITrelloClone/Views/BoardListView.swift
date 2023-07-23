@@ -70,7 +70,17 @@ struct BoardListView: View {
                     boardList: boardList,
                     card: card
                 )
+                .onDrag {
+                    NSItemProvider(object: card)
+                }
             }
+            .onInsert(
+                of: [Card.typeIdentifier],
+                perform: onInsertCard
+            )
+            .onMove(perform: boardList
+                .moveCards
+            )
             .listRowSeparator(.hidden)
             .listRowInsets(.init(
                 top: 4,
@@ -81,13 +91,36 @@ struct BoardListView: View {
             .listRowBackground(Color.clear)
         }
     }
-    
-    private func handleAddCard() {
+}
+
+// MARK: - Private Functions
+private extension BoardListView {
+    func handleAddCard() {
         presentAlertTextField(
-            title: "Add card to \(boardList.name)") { contentText in
+            title: "Add card to \(boardList.name)"
+        ) { contentText in
                 guard let contentText = contentText, !contentText.isEmpty else { return }
                 boardList.addNewCard(with: contentText)
-            }
+        }
+    }
+    
+    func onInsertCard(
+        index: Int,
+        itemProviders: [NSItemProvider]
+    ) {
+        for itemProvider in itemProviders {
+            itemProvider.loadObject(
+                ofClass: Card.self) { itemProviderReading, _ in
+                    guard let card = itemProviderReading as? Card else { return }
+                    DispatchQueue.main.async {
+                        board.move(
+                            card: card,
+                            to: boardList,
+                            at: index
+                        )
+                    }
+                }
+        }
     }
 }
 

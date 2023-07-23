@@ -19,6 +19,7 @@
 		1769DB842A66D3FA0005E7EE /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769DB832A66D3FA0005E7EE /* Board.swift */; };
 		1769DB872A66F5E60005E7EE /* Board+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769DB862A66F5E60005E7EE /* Board+Extension.swift */; };
 		177223432A6925470008366F /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177223422A6925470008366F /* View+Extension.swift */; };
+		17E66D702A6D4D6200503D14 /* BoardDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E66D6F2A6D4D6200503D14 /* BoardDropDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1769DB852A66F4420005E7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1769DB862A66F5E60005E7EE /* Board+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Board+Extension.swift"; sourceTree = "<group>"; };
 		177223422A6925470008366F /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		17E66D6F2A6D4D6200503D14 /* BoardDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardDropDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				1769DB832A66D3FA0005E7EE /* Board.swift */,
+				17E66D6F2A6D4D6200503D14 /* BoardDropDelegate.swift */,
 				1769DB812A66D2F80005E7EE /* BoardList.swift */,
 				1769DB7F2A66D1660005E7EE /* Card.swift */,
 			);
@@ -208,6 +211,7 @@
 				1769DB822A66D2F80005E7EE /* BoardList.swift in Sources */,
 				17559E1A2A68134E00498E30 /* BoardListView.swift in Sources */,
 				1769DB872A66F5E60005E7EE /* Board+Extension.swift in Sources */,
+				17E66D702A6D4D6200503D14 /* BoardDropDelegate.swift in Sources */,
 				1769DB712A66D08B0005E7EE /* SwiftUITrelloCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
