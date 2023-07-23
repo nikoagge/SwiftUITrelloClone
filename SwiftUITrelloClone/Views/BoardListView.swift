@@ -24,7 +24,7 @@ struct BoardListView: View {
                 .padding(.top, 16)
             
             Button("+ Add Card") {
-                
+                handleAddCard()
             }
             .padding(.horizontal)
             .frame(maxWidth: .infinity)
@@ -80,7 +80,14 @@ struct BoardListView: View {
             ))
             .listRowBackground(Color.clear)
         }
-
+    }
+    
+    private func handleAddCard() {
+        presentAlertTextField(
+            title: "Add card to \(boardList.name)") { contentText in
+                guard let contentText = contentText, !contentText.isEmpty else { return }
+                boardList.addNewCard(with: contentText)
+            }
     }
 }
 

@@ -7,7 +7,12 @@
 
 import Foundation
 
-class Card: NSObject, ObservableObject, Identifiable, Codable {
+class Card:
+    NSObject,
+    ObservableObject,
+    Identifiable,
+    Codable
+{
     private(set) var id = UUID()
     var boardListId: UUID
     @Published var content: String

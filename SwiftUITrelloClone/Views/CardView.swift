@@ -19,12 +19,12 @@ struct CardView: View {
             Spacer()
             
             Menu {
-                Button("Rename") {}
+                Button("Edit") { handleEdit() }
                 
                 Button(
                     "Delete",
                     role: .destructive
-                ) {}
+                ) { handleDelete() }
             } label: {
                 Image(systemName: "ellipsis.rectangle")
                     .imageScale(.small)
@@ -54,5 +54,23 @@ struct CardView_Previews: PreviewProvider {
         )
         .previewLayout(.sizeThatFits)
         .frame(width: 310)
+    }
+}
+
+// MARK: - Extension
+
+private extension CardView {
+    func handleEdit() {
+        presentAlertTextField(
+            title: "Edit Card",
+            defaultText: card.content
+        ) { newContentText in
+            guard let newContentText = newContentText, !newContentText.isEmpty else { return }
+            card.content = newContentText
+        }
+    }
+    
+    func handleDelete() {
+        boardList.removeCard(card)
     }
 }

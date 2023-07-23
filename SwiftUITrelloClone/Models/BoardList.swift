@@ -7,7 +7,12 @@
 
 import Foundation
 
-class BoardList: NSObject, ObservableObject, Identifiable, Codable {
+class BoardList:
+    NSObject,
+    ObservableObject,
+    Identifiable,
+    Codable
+{
     private(set) var id = UUID()
     var boardId: UUID
     @Published var name: String
@@ -65,6 +70,32 @@ extension BoardList: NSItemProviderWriting {
         }
         
         return nil
+    }
+    
+    func cardIndex(id: UUID) -> Int? {
+        cards.firstIndex { $0.id == id }
+    }
+    
+    func addNewCard(with content: String) {
+        cards.append(Card(
+            boardListId: id,
+            content: content
+        ))
+    }
+    
+    func removeCard(_ card: Card) {
+        guard let cardIndex = cardIndex(id: card.id) else { return }
+        cards.remove(at: cardIndex)
+    }
+    
+    func moveCards(
+        fromOffsets offsets: IndexSet,
+        toOffset offset: Int
+    ) {
+        cards.move(
+            fromOffsets: offsets,
+            toOffset: offset
+        )
     }
 }
 

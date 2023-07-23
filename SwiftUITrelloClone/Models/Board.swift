@@ -7,7 +7,10 @@
 
 import Foundation
 
-class Board: ObservableObject, Identifiable {
+class Board:
+    ObservableObject,
+    Identifiable
+{
     private(set) var id = UUID()
     @Published var name: String
     @Published var boardLists: [BoardList]
