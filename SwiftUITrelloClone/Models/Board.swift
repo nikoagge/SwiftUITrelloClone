@@ -43,6 +43,18 @@ class Board:
         card.boardListId = boardList.id
         boardLists[sourceBoardListIndex].cards.remove(at: sourceCardIndex)
     }
+    
+    func addNewBoardListWithName(_ name: String) {
+        boardLists.append(BoardList(
+            boardId: id,
+            name: name
+        ))
+    }
+    
+    func removeBoardList(_ boardList: BoardList) {
+        guard let index = boardListIndex(id: boardList.id) else { return }
+        boardLists.remove(at: index)
+    }
 }
 
 // MARK: Private Functions

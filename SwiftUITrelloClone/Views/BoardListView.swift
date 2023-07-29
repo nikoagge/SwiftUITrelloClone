@@ -46,14 +46,14 @@ struct BoardListView: View {
             
             Menu {
                 Button("Rename") {
-                    
+                    renameBoardList()
                 }
                 
                 Button(
                     "Delete",
                     role: .destructive
                 ) {
-                    
+                    board.removeBoardList(boardList)
                 }
             } label: {
                 Image(systemName: "ellipsis.circle")
@@ -120,6 +120,16 @@ private extension BoardListView {
                         )
                     }
                 }
+        }
+    }
+    
+    func renameBoardList() {
+        presentAlertTextField(
+            title: "Rename list",
+            defaultText: boardList.name
+        ) { name in
+            guard let name = name, !name.isEmpty else { return }
+            boardList.name = name
         }
     }
 }

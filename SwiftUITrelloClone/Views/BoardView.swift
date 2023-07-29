@@ -38,7 +38,7 @@ struct BoardView: View {
                     }
                     
                     Button("+ Add list") {
-                        
+                        handleOnAddList()
                     }
                     .frame(maxWidth: .infinity)
                     .padding()
@@ -48,11 +48,20 @@ struct BoardView: View {
                     .foregroundColor(.black)
                 }
                 .padding()
+                .animation(.default, value: board.boardLists)
             }
             .background(.clear)
             .navigationTitle("String")
         }
         .edgesIgnoringSafeArea([.bottom])
+    }
+    
+    private func handleOnAddList() {
+        presentAlertTextField(
+            title: "Add list") { name in
+                guard let name = name, !name.isEmpty else { return }
+                board.addNewBoardListWithName(name)
+            }
     }
 }
 
