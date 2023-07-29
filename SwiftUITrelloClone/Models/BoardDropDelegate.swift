@@ -12,12 +12,29 @@ struct BoardDropDelegate: DropDelegate {
     let board: Board
     let boardList: BoardList
     
+    @Binding var boardLists: [BoardList]
+    @Binding var current: BoardList?
+    
     func dropInfoUpdated(dropInfo: DropInfo) -> DropProposal? {
         if !cardItemProviders(dropInfo: dropInfo).isEmpty {
             return DropProposal(operation: .copy)
+        } else if !boardListItemProvider(dropInfo: dropInfo).isEmpty {
+            return DropProposal(operation: .move)
         }
         
         return nil
+    }
+    
+    func dropEntered(info: DropInfo) {
+        guard !boardListItemProvider(dropInfo: info).isEmpty,
+              let current = current,
+              boardList != current,
+              let fromIndex = boardLists.firstIndex(of: current),
+              let toIndex = boardLists.firstIndex(of: boardList) else { return }
+        boardLists.move(
+            fromOffsets: IndexSet(integer: fromIndex),
+            toOffset: toIndex > fromIndex ? toIndex + 1 : toIndex
+        )
     }
     
     func performDrop(info: DropInfo) -> Bool {
@@ -36,11 +53,20 @@ struct BoardDropDelegate: DropDelegate {
                 }
             }
         }
+        current = nil
         
         return true
     }
+}
+
+// MARK: - Private Functions
+
+private extension BoardDropDelegate {
+    func boardListItemProvider(dropInfo: DropInfo) -> [NSItemProvider] {
+        dropInfo.itemProviders(for: [BoardList.typeIdentifier])
+    }
     
-    private func cardItemProviders(dropInfo: DropInfo) -> [NSItemProvider] {
+    func cardItemProviders(dropInfo: DropInfo) -> [NSItemProvider] {
         dropInfo.itemProviders(for: [Card.typeIdentifier])
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BoardView: View {
     @StateObject private var board = Board.stub
+    @State private var dragging: BoardList?
     
     var body: some View {
         ZStack {
@@ -28,11 +29,22 @@ struct BoardView: View {
                             board: board,
                             boardList: boardList
                         )
+                        .onDrag({
+                            self.dragging = boardList
+                            
+                            return NSItemProvider(object: boardList)
+                        })
+                        
                         .onDrop(
-                            of: [Card.typeIdentifier],
+                            of: [
+                                Card.typeIdentifier,
+                                BoardList.typeIdentifier
+                            ],
                             delegate: BoardDropDelegate(
                                 board: board,
-                                boardList: boardList
+                                boardList: boardList,
+                                boardLists: $board.boardLists,
+                                current: $dragging
                             )
                         )
                     }
