@@ -64,6 +64,11 @@ struct BoardView: View {
             }
             .background(.clear)
             .navigationTitle("String")
+            .toolbar {
+                Button("Rename") {
+                    renameBoardView()
+                }
+            }
         }
         .edgesIgnoringSafeArea([.bottom])
     }
@@ -74,6 +79,20 @@ struct BoardView: View {
                 guard let name = name, !name.isEmpty else { return }
                 board.addNewBoardListWithName(name)
             }
+    }
+}
+
+// MARK: - Private Functions
+
+private extension BoardView {
+    func renameBoardView() {
+        presentAlertTextField(
+            title: "Rename Board",
+            defaultText: board.name) { newBoardName in
+                guard let newBoardName = newBoardName,
+                      !newBoardName.isEmpty else { return }
+                board.name = newBoardName
+        }
     }
 }
 

@@ -94,6 +94,7 @@ struct BoardListView: View {
 }
 
 // MARK: - Private Functions
+
 private extension BoardListView {
     func handleAddCard() {
         presentAlertTextField(
