@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174B4DF62A76B55C0085B385 /* BoardDiskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B4DF52A76B55C0085B385 /* BoardDiskRepository.swift */; };
 		17559E162A67C14E00498E30 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17559E152A67C14E00498E30 /* BoardView.swift */; };
 		17559E182A67C1F000498E30 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17559E172A67C1F000498E30 /* Color+Extension.swift */; };
 		17559E1A2A68134E00498E30 /* BoardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17559E192A68134E00498E30 /* BoardListView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		174B4DF52A76B55C0085B385 /* BoardDiskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardDiskRepository.swift; sourceTree = "<group>"; };
 		17559E152A67C14E00498E30 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		17559E172A67C1F000498E30 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		17559E192A68134E00498E30 /* BoardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				1769DB832A66D3FA0005E7EE /* Board.swift */,
+				174B4DF52A76B55C0085B385 /* BoardDiskRepository.swift */,
 				17E66D6F2A6D4D6200503D14 /* BoardDropDelegate.swift */,
 				1769DB812A66D2F80005E7EE /* BoardList.swift */,
 				1769DB7F2A66D1660005E7EE /* Card.swift */,
@@ -205,6 +208,7 @@
 				17559E162A67C14E00498E30 /* BoardView.swift in Sources */,
 				17559E1C2A68309200498E30 /* CardView.swift in Sources */,
 				177223432A6925470008366F /* View+Extension.swift in Sources */,
+				174B4DF62A76B55C0085B385 /* BoardDiskRepository.swift in Sources */,
 				17559E182A67C1F000498E30 /* Color+Extension.swift in Sources */,
 				1769DB802A66D1660005E7EE /* Card.swift in Sources */,
 				1769DB842A66D3FA0005E7EE /* Board.swift in Sources */,

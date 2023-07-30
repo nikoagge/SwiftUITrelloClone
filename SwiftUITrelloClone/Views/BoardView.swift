@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BoardView: View {
-    @StateObject private var board = Board.stub
+    @StateObject private var board = BoardDiskRepository().loadBoardFromDisk() ?? Board.stub
     @State private var dragging: BoardList?
     
     var body: some View {
@@ -71,6 +71,10 @@ struct BoardView: View {
             }
         }
         .edgesIgnoringSafeArea([.bottom])
+        .onReceive(
+            NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+                BoardDiskRepository().saveBoardToDisk(board)
+            }
     }
     
     private func handleOnAddList() {
